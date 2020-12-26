@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="/css/datepicker.css" />
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.datetimepicker.full.js"></script>
+    <script src="/js/datepicker.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="icon" href="/img/logo.jpg"></link>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <title>Candidate Prescreening</title>
+  </head>
+<style>
+body,#loginpopup{
+  font-weight: bold;
+  color: #353b44;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#loginpopup{
+  font-size:14px;
+}
+.Statusupdatecls{
+  font-size:12px;
+}
+.fontAwesome {
+  font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+.mainview{
+  padding-left: 50px;
+  padding-right: 20px;
+}
+fieldset{
+  border: 1px solid lightgrey !important;
+  padding: 20px;
+}
+legend{
+  width: auto;
+  padding: 10px;
+}
+.radio_style{
+  display: inline;
+  padding-left: 30px;
+}
+</style>
+
+<body>
+
+<div class="container">
+  <div class="card card-body">
+   <div class="row head-content">
+     <div class="col-9 col-md-4 logo"><img src="/img/logo.jpg"></div>
+     <h3>Candidate Interview Form</h3>
+     <!-- <div class="col-3 col-md-8 text-right logout"><a href="/signout">Logout</a></div> -->
+   </div><br>
+
+   <div class="mainview">
+    <form autocomplete="off" method="POST" id="addform" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Personal Details</legend>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td>Denash shaw</td>
+            <td>7092141393</td>
+            <td>denashshaw@gmail.com</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-md-3">        
+        <div class="md-form">
+          <input type="text" id="form1" class="form-control">
+          <label for="form1">Date of Birth</label>
+        </div>
+        <div class="md-form">
+          <input type="text" id="form1" class="form-control">
+          <label for="form1">Gender</label>
+        </div>
+         <div class="md-form">
+          <input type="text" id="form1" class="form-control">
+          <label for="form1">Highest Qualification</label>
+        </div>
+      </div>
+
+     <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Current Addresss</label>
+      </div>
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Area</label>
+      </div>
+       <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">City & Pincode</label>
+      </div>
+    </div>
+
+     <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Permanent Addresss</label>
+      </div>
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Area</label>
+      </div>
+       <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">City & Pincode</label>
+      </div>
+    </div>
+
+      <div class="col-md-3 md-form">
+        <img src="http://localhost/4dgenie/img/profile-pic.jpg" style="width: 100%;height: 200px;">
+      </div>
+    </div>
+  </fieldset>
+<br>
+
+  <fieldset>
+    <legend>Work Experience</legend>
+    <div class="row">
+     <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Overall Experience:</label>
+      </div>
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Current Designation:</label>
+      </div>
+    </div>
+
+     <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Current Company:</label>
+      </div>
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Current CTC:</label>
+      </div>            
+    </div>
+
+     <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Expected CTC:</label>
+      </div>
+       <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Expected Date of Joining:</label>
+      </div>      
+    </div>
+
+    <div class="col-md-3">
+      <div class="md-form">
+        <input type="text" id="form1" class="form-control">
+        <label for="form1">Notice period:</label>
+      </div>
+    </div>
+
+    </div>
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <legend>Interview Details</legend>
+    <div class="row">
+      <div class="col-md-6">
+      <p>Position Applied:</p>
+          <select class="form-control col-md-6" style="display: inline;">
+            <option>AR Caller</option>
+            <option>Data Entry</option>
+            <option>Marketing Executive</option>
+            <option>Software Developer</option>
+          </select>
+      </div> 
+
+     <div class="col-md-6">
+      <p>Have you taken up interview with us in the last 6 months?   </p>
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="last_6_months" id="yes"/>
+          <label class="form-check-label" for="yes">Yes </label>
+        </div>
+
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="last_6_months" id="no"/>
+          <label class="form-check-label" for="no"> No </label>
+        </div>
+      </div> 
+
+     <div class="col-md-12"><br><br>
+      <p>How did you hear about this opening? </p>
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="heared_opening" id="job_portal"/>
+          <label class="form-check-label" for="job_portal">Job Portal</label>
+        </div>
+
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="heared_opening" id="social_media"/>
+          <label class="form-check-label" for="social_media">Social Media</label>
+        </div>
+
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="heared_opening" id="friends_family"/>
+          <label class="form-check-label" for="friends_family">Friends/Family</label>
+        </div>
+
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="heared_opening" id="emp_reference"/>
+          <label class="form-check-label" for="emp_reference">Employee Reference</label>
+        </div>
+
+        <div class="form-check radio_style">
+          <input class="form-check-input" type="radio" name="heared_opening" id="others"/>
+          <label class="form-check-label" for="others">Others</label>
+        </div>
+      </div>
+
+        <div class="row" style="padding: 20px;">
+          <div class="col-md-6">
+            <div class="md-form">
+              <input type="text" id="form1" class="form-control">
+              <label for="form1">Employee Name:</label>
+            </div> 
+          </div>
+
+          <div class="col-md-6">
+            <div class="md-form">
+              <input type="text" id="form1" class="form-control">
+              <label for="form1">Employee Code:</label>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  </div>
+  <!-- Main view ends here -->
+</div>
+</div>
+
+

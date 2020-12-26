@@ -1,0 +1,32 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "JaganDinesh",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cookie": "^0.4.1",
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.1",
+    "handlebars-dateformat": "^1.1.1",
+    "handlebars-helpers": "^0.10.0",
+    "localStorage": "^1.0.4",
+    "md5": "^2.3.0",
+    "set-tz": "^0.2.0",
+    "socket.io": "^3.0.3",
+    "socket.io-cookie-parser": "^1.0.0",
+    "store": "^2.0.12"
+  },
+  "description": ""
+}
