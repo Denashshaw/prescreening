@@ -73,6 +73,9 @@ legend{
   display: inline;
   padding-left: 30px;
 }
+.nopad{
+  margin:0 !important;
+}
 </style>
 
 <body>
@@ -271,10 +274,98 @@ legend{
         </div>
       </div>
     </fieldset>
+
+    <fieldset>
+      <legend>References:</legend>
+        <form action="#" method="POST" id="formSubmit">
+          <table class="form-table" id="customFields">
+          <tr valign="top">
+            {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}}
+            <td>
+              <div class="md-form nopad">
+                <input type="text" class="form-control" id="empName" name="empName[]" value="" /> &nbsp;
+                <label for="">Name</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="md-form nopad">
+                <input type="text" class="form-control" id="designation" name="designation[]" value="" />
+                <label for="">Designation</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="md-form nopad">
+                <input type="text" class="form-control" id="contact" name="contact[]" value="" />
+                <label for="">Contact</label>
+              </div>
+            </td>
+
+            <td>
+              <a href="javascript:void(0);" class="addCF"><i class="fa fa-plus-circle fa-2x text-success" aria-hidden="true"></i></a>
+            </td>
+          </tr>
+          </table>          
+        </form>    
+    </fieldset>
+
+    <fieldset>
+      <legend>Education Details</legend>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Career gap, if Any and reason:  </p>
+          <div class="form-check radio_style">
+            <input class="form-check-input" type="radio" name="career_gap" id="gap_yes"/>
+            <label class="form-check-label" for="gap_yes">Yes</label>
+          </div>
+
+          <div class="form-check radio_style">
+            <input class="form-check-input" type="radio" name="career_gap" id="gap_no"/>
+            <label class="form-check-label" for="gap_no">No</label>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="md-form">
+            <textarea type="text" id="form8" class="md-textarea" rows="5" cols="30"></textarea>
+            <label for="form8">Reason</label>
+          </div>
+        </div>
+
+        <div class="col-md-4">          
+            <div class="md-form nopad">
+              <input type="text" class="form-control" id="contact" name="contact[]" value="" />
+              <label for="">Value added courses / Certifications</label>
+            </div>
+        </div>
+
+    </div>       
+    </fieldset>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-dark btn-rounded">Submit</button>
+    </div>
   </form>
   </div>
   <!-- Main view ends here -->
 </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+	    $(".addCF").click(function(){
+		$("#customFields").append('<tr valign="top"><td><div class="md-form nopad"><input type="text" class="form-control" id="empName" name="empName[]" value="" /><label for="">Name</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="designation" name="designation[]" value="" /><label for="">Designation</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="contact" name="contact[]" value="" /><label for="">Contact</label></div></td><td><a href="javascript:void(0);" class="remCF"><i class="fa fa-minus-circle fa-2x text-danger" aria-hidden="true"></i></a></td></tr>');
+        });
+        
+    $("#customFields").on('click','.remCF',function(){
+        $(this).parent().parent().remove();
+    });
+
+    $('#formSubmit').submit((e) => {
+        console.log($('#formSubmit').serialize());
+        e.preventDefault();
+    });
+});
+</script>
 
