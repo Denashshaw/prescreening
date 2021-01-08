@@ -1,0 +1,26 @@
+<form action="/reference" id="myShit" method="post">    
+    <input type="text" name="reference[]">
+    <div id="inputDiv"></div>
+    <button type="button" id="submitForm">Mini Submit</button>
+</form>
+
+<script>
+    $(document).ready(() => {
+        $('#inputDiv').html(`<input type="text" name="reference[]"><br><input type="text" name="reference[]"><input type="text" name="reference[]">`);
+    });
+    
+    $('#submitForm').click((e) => {
+        $.ajax({
+            url: '/reference',
+            method: 'POST',
+            data: {
+                reference: $('#myShit').serialize()
+            }, success: function(res){
+                e.preventDefault();
+                console.log('success');
+            }, failed: function(err){
+                console.log(err);
+            }
+        });        
+    });
+</script>

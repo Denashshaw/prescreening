@@ -1,371 +1,603 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/jquery.datetimepicker.css" />
-    <link rel="stylesheet" href="/css/datepicker.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.datetimepicker.full.js"></script>
-    <script src="/js/datepicker.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="icon" href="/img/logo.jpg"></link>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/jquery.datetimepicker.css" />
+  <link rel="stylesheet" href="/css/datepicker.css" />
 
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-    <title>Candidate Prescreening</title>
-  </head>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.datetimepicker.full.js"></script>
+  <script src="/js/datepicker.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="icon" href="/img/logo.jpg">
+  </link>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {{!-- Date Picker for custom format --}}
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <title>Candidate Prescreening</title>
+</head>
 <style>
-body,#loginpopup{
-  font-weight: bold;
-  color: #353b44;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-}
+  body,
+  #loginpopup {
+    font-weight: bold;
+    color: #353b44;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+  }
 
-#loginpopup{
-  font-size:14px;
-}
-.Statusupdatecls{
-  font-size:12px;
-}
-.fontAwesome {
-  font-family: Helvetica, 'FontAwesome', sans-serif;
-}
-.mainview{
-  padding-left: 50px;
-  padding-right: 20px;
-}
-fieldset{
-  border: 1px solid lightgrey !important;
-  padding: 20px;
-}
-legend{
-  width: auto;
-  padding: 10px;
-}
-.radio_style{
-  display: inline;
-  padding-left: 30px;
-}
-.nopad{
-  margin:0 !important;
-}
+  #loginpopup {
+    font-size: 14px;
+  }
+
+  .Statusupdatecls {
+    font-size: 12px;
+  }
+
+  .fontAwesome {
+    font-family: Helvetica, 'FontAwesome', sans-serif;
+  }
+
+  .mainview {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  fieldset {
+    border: 1px solid lightgrey !important;
+    padding: 20px;
+  }
+
+  legend {
+    width: auto;
+    padding: 10px;
+  }
+
+  .radio_style {
+    display: inline;
+    padding-left: 30px;
+  }
+
+  .nopad {
+    margin: 0 !important;
+  }
+
+  #inputFile {
+    display: none;
+  }
+
+  .custom-file-upload {
+    cursor: pointer;
+    display: grid;
+    margin-left: 40px;
+  }
+
+  #image_upload_preview {
+    max-height: 160px;
+    min-width: 160px;
+  }
 </style>
 
 <body>
 
-<div class="container">
-  <div class="card card-body">
-   <div class="row head-content">
-     <div class="col-9 col-md-4 logo"><img src="/img/logo.jpg"></div>
-     <h3>Candidate Interview Form</h3>
-     <!-- <div class="col-3 col-md-8 text-right logout"><a href="/signout">Logout</a></div> -->
-   </div><br>
+  <div class="container">
+    <div class="card card-body">
+      <div class="row head-content">
+        <div class="col-9 col-md-4 logo"><img src="/img/logo.jpg"></div>
+        <h3>Candidate Interview Form</h3>
+        <!-- <div class="col-3 col-md-8 text-right logout"><a href="/signout">Logout</a></div> -->
+      </div><br>
 
-   <div class="mainview">
-    <form autocomplete="off" method="POST" id="addform" enctype="multipart/form-data">
-    <fieldset>
-      <legend>Personal Details</legend>
-    <div class="row">
-      <div class="col-md-12">
-        <table class="table table-bordered">
-          <tr>
-            <td>Denash shaw</td>
-            <td>7092141393</td>
-            <td>denashshaw@gmail.com</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="col-md-3">        
-        <div class="md-form">
-          <input type="text" id="form1" class="form-control">
-          <label for="form1">Date of Birth</label>
-        </div>
-        <div class="md-form">
-          <input type="text" id="form1" class="form-control">
-          <label for="form1">Gender</label>
-        </div>
-         <div class="md-form">
-          <input type="text" id="form1" class="form-control">
-          <label for="form1">Highest Qualification</label>
-        </div>
-      </div>
-
-     <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Current Addresss</label>
-      </div>
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Area</label>
-      </div>
-       <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">City & Pincode</label>
-      </div>
-    </div>
-
-     <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Permanent Addresss</label>
-      </div>
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Area</label>
-      </div>
-       <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">City & Pincode</label>
-      </div>
-    </div>
-
-      <div class="col-md-3 md-form">
-        <img src="http://localhost/4dgenie/img/profile-pic.jpg" style="width: 100%;height: 200px;">
-      </div>
-    </div>
-  </fieldset>
-<br>
-
-  <fieldset>
-    <legend>Work Experience</legend>
-    <div class="row">
-     <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Overall Experience:</label>
-      </div>
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Current Designation:</label>
-      </div>
-    </div>
-
-     <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Current Company:</label>
-      </div>
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Current CTC:</label>
-      </div>            
-    </div>
-
-     <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Expected CTC:</label>
-      </div>
-       <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Expected Date of Joining:</label>
-      </div>      
-    </div>
-
-    <div class="col-md-3">
-      <div class="md-form">
-        <input type="text" id="form1" class="form-control">
-        <label for="form1">Notice period:</label>
-      </div>
-    </div>
-
-    </div>
-  </fieldset>
-
-  <br>
-
-  <fieldset>
-    <legend>Interview Details</legend>
-    <div class="row">
-      <div class="col-md-6">
-      <p>Position Applied:</p>
-          <select class="form-control col-md-6" style="display: inline;">
-            <option>AR Caller</option>
-            <option>Data Entry</option>
-            <option>Marketing Executive</option>
-            <option>Software Developer</option>
-          </select>
-      </div> 
-
-     <div class="col-md-6">
-      <p>Have you taken up interview with us in the last 6 months?   </p>
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="last_6_months" id="yes"/>
-          <label class="form-check-label" for="yes">Yes </label>
-        </div>
-
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="last_6_months" id="no"/>
-          <label class="form-check-label" for="no"> No </label>
-        </div>
-      </div> 
-
-     <div class="col-md-12"><br><br>
-      <p>How did you hear about this opening? </p>
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="heared_opening" id="job_portal"/>
-          <label class="form-check-label" for="job_portal">Job Portal</label>
-        </div>
-
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="heared_opening" id="social_media"/>
-          <label class="form-check-label" for="social_media">Social Media</label>
-        </div>
-
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="heared_opening" id="friends_family"/>
-          <label class="form-check-label" for="friends_family">Friends/Family</label>
-        </div>
-
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="heared_opening" id="emp_reference"/>
-          <label class="form-check-label" for="emp_reference">Employee Reference</label>
-        </div>
-
-        <div class="form-check radio_style">
-          <input class="form-check-input" type="radio" name="heared_opening" id="others"/>
-          <label class="form-check-label" for="others">Others</label>
-        </div>
-      </div>
-
-        <div class="row" style="padding: 20px;">
-          <div class="col-md-6">
-            <div class="md-form">
-              <input type="text" id="form1" class="form-control">
-              <label for="form1">Employee Name:</label>
-            </div> 
-          </div>
-
-          <div class="col-md-6">
-            <div class="md-form">
-              <input type="text" id="form1" class="form-control">
-              <label for="form1">Employee Code:</label>
-            </div> 
-          </div>
-        </div>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>References:</legend>
-        <form action="#" method="POST" id="formSubmit">
-          <table class="form-table" id="customFields">
-          <tr valign="top">
-            {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}}
-            <td>
-              <div class="md-form nopad">
-                <input type="text" class="form-control" id="empName" name="empName[]" value="" /> &nbsp;
-                <label for="">Name</label>
+      <div class="mainview">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <form id="formid" action="/test/{{res.temp_id}}" method="POST" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-12">
+                <table class="table table-bordered">
+                  <tr>
+                    <td>{{res.name}}</td>
+                    <td>{{res.mobile}}</td>
+                    <td>{{res.email}}</td>
+                  </tr>
+                </table>
               </div>
-            </td>
 
-            <td>
-              <div class="md-form nopad">
-                <input type="text" class="form-control" id="designation" name="designation[]" value="" />
-                <label for="">Designation</label>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="date" id="date_of_birth" name="date_of_birth" class="form-control">
+                  <input type="hidden" class="candid_id" name="candid_id" value="4DGC0{{res.id}}" />
+                  <label for="date_of_birth">Date of Birth</label>
+                </div>
+                <div class="">
+                  {{!-- <input type="text" id="gender" class="form-control"> --}}
+                  {{!-- <label for="gender">Gender</label> --}}
+                  <select name="gender" id="gender" class="form-control">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="highest_qualification" name="highest_qualification" class="form-control">
+                  <label for="highest_qualification">Highest Qualification</label>
+                </div>
               </div>
-            </td>
 
-            <td>
-              <div class="md-form nopad">
-                <input type="text" class="form-control" id="contact" name="contact[]" value="" />
-                <label for="">Contact</label>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="text" id="current_add" name="current_add" class="form-control">
+                  <label for="current_add">Current Addresss</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="current_area" name="current_area" class="form-control">
+                  <label for="current_area">Area</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="current_city" name="current_city" class="form-control">
+                  <label for="current_city">City & Pincode</label>
+                </div>
               </div>
-            </td>
 
-            <td>
-              <a href="javascript:void(0);" class="addCF"><i class="fa fa-plus-circle fa-2x text-success" aria-hidden="true"></i></a>
-            </td>
-          </tr>
-          </table>          
-        </form>    
-    </fieldset>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="text" id="per_address" name="per_address" class="form-control">
+                  <label for="per_address">Permanent Addresss</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="per_area" name="per_area" class="form-control">
+                  <label for="per_area">Area</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="per_city" name="per_city" class="form-control">
+                  <label for="per_city">City & Pincode</label>
+                </div>
+              </div>
 
-    <fieldset>
-      <legend>Education Details</legend>
-      <div class="row">
-        <div class="col-md-4">
-          <p>Career gap, if Any and reason:  </p>
-          <div class="form-check radio_style">
-            <input class="form-check-input" type="radio" name="career_gap" id="gap_yes"/>
-            <label class="form-check-label" for="gap_yes">Yes</label>
-          </div>
-
-          <div class="form-check radio_style">
-            <input class="form-check-input" type="radio" name="career_gap" id="gap_no"/>
-            <label class="form-check-label" for="gap_no">No</label>
-          </div>
-        </div>
-        
-        <div class="col-md-4">
-          <div class="md-form">
-            <textarea type="text" id="form8" class="md-textarea" rows="5" cols="30"></textarea>
-            <label for="form8">Reason</label>
-          </div>
-        </div>
-
-        <div class="col-md-4">          
-            <div class="md-form nopad">
-              <input type="text" class="form-control" id="contact" name="contact[]" value="" />
-              <label for="">Value added courses / Certifications</label>
+              <div class="col-md-3 md-form">
+                <label for="inputFile" class="custom-file-upload">
+                  <img id="image_upload_preview"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYeslU15Yklvaa74DRq2z7u4WpUiRDkRlorA&usqp=CAU"
+                    alt="image broken" /><span class="text-center">Change Image</span></label>
+                <input type='file' id="inputFile" name="inputFile" accept="image/gif, image/jpeg, image/png" />
+              </div>
             </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+          <legend>Work Experience</legend>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="number" id="overall_exp" name="overall_exp" class="form-control">
+                <label for="overall_exp">Overall Experience:</label>
+              </div>
+              <div class="md-form">
+                <input type="text" id="current_designation" name="current_designation" class="form-control">
+                <label for="current_designation">Current Designation:</label>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="text" id="current_company" name="current_company" class="form-control">
+                <label for="current_company">Current Company:</label>
+              </div>
+              <div class="md-form">
+                <input type="number" id="current_ctc" name="current_ctc" class="form-control">
+                <label for="current_ctc">Current CTC (Months):</label>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="number" id="expected_ctc" name="expected_ctc" class="form-control">
+                <label for="expected_ctc">Expected CTC (Months):</label>
+              </div>
+              <div class="md-form">
+                <input type="date" id="doj" name="doj" class="form-control">
+                <label for="doj">Expected Date of Joining:</label>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="number" id="notice_period" name="notice_period" class="form-control">
+                <label for="notice_period">Notice period:</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend>Interview Details</legend>
+          <div class="row">
+            <div class="col-md-6">
+              <p>Position Applied:</p>
+              <select class="form-control col-md-6" style="display: inline;" name="position_applied_for"
+                id="position_applied_for">
+                <option>AR Caller</option>
+                <option>Data Entry</option>
+                <option>Marketing Executive</option>
+                <option>Software Developer</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <p>Have you taken up interview with us in the last 6 months? </p>
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="previous_interview_6" id="interview_yes"
+                  value="Yes" />
+                <label class="form-check-label" for="interview_yes">Yes </label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="previous_interview_6" id="interview_no" value="No" />
+                <label class="form-check-label" for="interview_no"> No </label>
+              </div>
+            </div>
+
+            <div class="col-md-12"><br><br>
+              <p>How did you hear about this opening? </p>
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="heared_opening" id="job_portal" value="job_portal" />
+                <label class="form-check-label" for="job_portal">Job Portal</label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="heared_opening" id="social_media"
+                  value="social_media" />
+                <label class="form-check-label" for="social_media">Social Media</label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="heared_opening" id="friends_family"
+                  value="friends_family" />
+                <label class="form-check-label" for="friends_family">Friends/Family</label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="heared_opening" id="emp_reference"
+                  value='emp_reference' />
+                <label class="form-check-label" for="emp_reference">Employee Reference</label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="heared_opening" id="others" value="others" />
+                <label class="form-check-label" for="others">Others</label>
+              </div>
+            </div>
+
+            <div class="row emp_ref_div" style="padding: 20px;" style="display: none;">
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input type="text" id="internal_emp_ref_name" name="internal_emp_ref_name" class="form-control">
+                  <label for="internal_emp_ref_name">Employee Name:</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input type="text" id="internal_emp_ref_code" name="internal_emp_ref_code" class="form-control">
+                  <label for="internal_emp_ref_code">Employee Code:</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>PAST WORK EXPERIENCE:</legend>
+
+          <table class="form-table" id="past_work">
+            <tr valign="top">
+              {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}}
+              <td>
+                <div class="md-form nopad">
+                  <input type="text" class="form-control" id="company" name="company" /> &nbsp;
+                  <label for="company">Company</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="text" class="form-control" id="past_designation" name="past_designation" />
+                  <label for="past_designation">Designation</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="date" class="form-control" id="period_from" name="period_from" />
+                  <label for="period_from">Period From</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="date" class="form-control" id="period_to" name="period_to" />
+                  <label for="period_to">Period To</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="text" class="form-control" id="reason_for_leaving" name="reason_for_leaving" />
+                  <label for="reason_for_leaving">Reason For Leaving</label>
+                </div>
+              </td>
+
+              <td>
+                <a href="javascript:void(0);" class="add_past"><i class="fa fa-plus-circle fa-2x text-success"
+                    aria-hidden="true"></i></a>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <fieldset>
+          <legend>Education Details</legend>
+          <div class="row">
+            <div class="col-md-4">
+              <p>Career gap, if any and Reason: </p>
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="career_gap" id="gap_yes" value="Yes" />
+                <label class="form-check-label" for="gap_yes">Yes</label>
+              </div>
+
+              <div class="form-check radio_style">
+                <input class="form-check-input" type="radio" name="career_gap" id="gap_no" value="No" />
+                <label class="form-check-label" for="gap_no">No</label>
+              </div>
+            </div>
+
+            <div class="col-md-4 reason_div">
+              <div class="md-form nopad">
+                <input type="text" id="career_gap_reason" name="career_gap_reason" class="form-control">
+                <label for="career_gap_reason">Reason</label>
+              </div>
+            </div>
+
+            {{!-- <div class="col-md-4">
+              <div class="md-form nopad">
+                <input type="text" class="form-control" id="certifications" name="certifications" />
+                <label for="certifications">Courses / Certifications</label>
+              </div>
+            </div> --}}
+          </div>
+          <br>
+          <div class="row pl-3">
+            <table class="form-table" id="educationalFields">
+              <tr valign="top">
+                {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}}
+                <td>
+                  <div class="md-form nopad">
+                    <input type="text" class="form-control" id="ins_name" name="ins_name" /> &nbsp;
+                    <label for="ins_name">Institute/School Name</label>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="md-form nopad">
+                    <input type="text" class="form-control" id="course_name" name="course_name" /> &nbsp;
+                    <label for="course_name">Course Name</label>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="md-form nopad">
+                    <input type="number" class="form-control" id="passed_out" name="passed_out" />
+                    <label for="passed_out">Passed Out</label>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="md-form nopad">
+                    <input type="number" class="form-control" id="percentage" name="percentage" />
+                    <label for="percentage">Percentage</label>
+                  </div>
+                </td>
+
+                <td>
+                  <a href="javascript:void(0);" class="addEducation"><i class="fa fa-plus-circle fa-2x text-success"
+                      aria-hidden="true"></i></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>References:</legend>
+          <table class="form-table" id="customFields">
+            <tr valign="top">
+              {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}}
+              <td>
+                <div class="md-form nopad">
+                  <input type="text" class="form-control" id="empName" name="empName[]" /> &nbsp;
+                  <label for="empName">Name</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="text" class="form-control" id="designation" name="designation[]" />
+                  <label for="designation">Designation</label>
+                </div>
+              </td>
+
+              <td>
+                <div class="md-form nopad">
+                  <input type="number" class="form-control" id="contact" name="contact[]" />
+                  <label for="contact">Contact</label>
+                </div>
+              </td>
+
+              <td>
+                <a href="javascript:void(0);" class="addCF"><i class="fa fa-plus-circle fa-2x text-success"
+                    aria-hidden="true"></i></a>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Upload Resume:</legend>
+          <div class="md-form nopad">
+            <input type='file' id="resumeFile" name="resumeFile" accept="application/pdf" />
+          </div>
+        </fieldset>
+        </form>
+        <fieldset>
+          <legend>Upload Resume:</legend>
+          <div class="md-form nopad">
+            {{> index }}
+          </div>
+        </fieldset>
+
+        <div class="text-center">
+          <button type="button" class="btn btn-dark btn-rounded" id="submit_btn">Submit</button>
         </div>
-
-    </div>       
-    </fieldset>
-
-    <div class="text-center">
-      <button type="submit" class="btn btn-dark btn-rounded">Submit</button>
+      </div>
+      <!-- Main view ends here -->
     </div>
-  </form>
   </div>
-  <!-- Main view ends here -->
-</div>
-</div>
 
-<script>
-    $(document).ready(function(){
-	    $(".addCF").click(function(){
-		$("#customFields").append('<tr valign="top"><td><div class="md-form nopad"><input type="text" class="form-control" id="empName" name="empName[]" value="" /><label for="">Name</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="designation" name="designation[]" value="" /><label for="">Designation</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="contact" name="contact[]" value="" /><label for="">Contact</label></div></td><td><a href="javascript:void(0);" class="remCF"><i class="fa fa-minus-circle fa-2x text-danger" aria-hidden="true"></i></a></td></tr>');
-        });
-        
-    $("#customFields").on('click','.remCF',function(){
-        $(this).parent().parent().remove();
+  <script>
+    $(document).ready(() => {
+      var i = 0;
+      $('#addBtn').click(() => {
+        var add_btn_div = '';
+        i++;
+        add_btn_div += `<input type='text' name='address[]'><button type="button" id="remvBtn">-</button><br><br>`;
+        $('#add_btn_div').append(add_btn_div);
+      });
+    });
+    /* $("#date_of_birth").datepicker({
+      altField: "#date_of_birth",
+      altFormat: "M d, yy",
+      changeYear: true,
+      yearRange: "1970:2020"
     });
 
-    $('#formSubmit').submit((e) => {
-        console.log($('#formSubmit').serialize());
-        e.preventDefault();
+    $("#doj").datepicker({
+      altField: "#doj",
+      altFormat: "M d, yy",
+      changeYear: true,
+      yearRange: "1970:2022"
     });
-});
-</script>
 
+    $("#period_from").datepicker({
+      altField: "#period_from",
+      altFormat: "M d, yy",
+      changeYear: true,
+      yearRange: "1970:2020"
+    });
+
+    $("#period_to").datepicker({
+      altField: "#period_to",
+      altFormat: "M d, yy",
+      changeYear: true,
+      yearRange: "1970:2020"
+    }); */
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#image_upload_preview').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#inputFile").change(function () {
+      readURL(this);
+    });
+
+    $('.emp_ref_div').hide();
+    $('.reason_div').hide();
+
+    $('input[type=radio][name=career_gap]').change(() => {
+      if ($('#gap_yes').is(':checked')) {
+        $('.reason_div').show();
+      } else {
+        $('.reason_div').hide();
+      }
+    });
+
+    $('input[type=radio][name=heared_opening]').change(() => {
+      if ($('#emp_reference').is(':checked')) {
+        $('.emp_ref_div').show();
+      } else {
+        $('.emp_ref_div').hide();
+      }
+    });
+
+    var i = 0;
+    $(".addCF").click(function () {
+      i++;
+      $("#customFields").append(`<tr valign="top"><td><div class="md-form nopad"><input type="text" class="form-control" id="empName${i}" name="empName[${i}]"/><label for="empName">Name</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="designation" name="designation[]"/><label for="designation">Designation</label></div></td><td><div class="md-form nopad"><input type="number" class="form-control" id="contact" name="contact[]"/><label for="contact">Contact</label></div></td><td><a href="javascript:void(0);" class="remCF"><i class="fa fa-minus-circle fa-2x text-danger" aria-hidden="true"></i></a></td></tr>`);
+    });
+
+    $(".add_past").click(function () {
+      $("#past_work").append('<tr valign="top"><td><div class="md-form nopad"><input type="text" class="form-control" id="company" name="company"/><label for="company">Company</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="past_designation" name="past_designation"/><label for="past_designation">Designation</label></div></td><td><div class="md-form nopad"><input type="date" class="form-control" id="period_from" name="period_from"/><label for="period_from">Period From</label></div></td><td><div class="md-form nopad"><input type="date" class="form-control" id="period_to" name="period_to"/><label for="period_to">Period To</label></div></td><td><div class="md-form nopad"><input type="text" class="form-control" id="reason_for_leaving" name="reason_for_leaving"/><label for="reason_for_leaving">Reason For Leaving</label></div></td><td><a href="javascript:void(0);" class="remove_past"><i class="fa fa-minus-circle fa-2x text-danger" aria-hidden="true"></i></a></td></tr>');
+    });
+
+
+    $(".addEducation").click(function () {
+      $("#educationalFields").append('<tr valign="top"> {{!-- <th scope="row"><label for="empName">Employee Name</label></th> --}} <td> <div class="md-form nopad"> <input type="text" class="form-control" id="ins_name" name="ins_name"/> &nbsp; <label for="ins_name">Institute/School Name</label> </div> </td> <td> <div class="md-form nopad"> <input type="text" class="form-control" id="course_name" name="course_name"/> &nbsp; <label for="course_name">Course Name</label> </div> </td> <td> <div class="md-form nopad"> <input type="number" class="form-control" id="passed_out" name="passed_out"/> <label for="passed_out">Passed Out</label> </div> </td> <td> <div class="md-form nopad"> <input type="text" class="form-control" id="percentage" name="percentage" value="" /> <label for="percentage">Percentage</label> </div> </td> <td> <a href="javascript:void(0);" class="remove_Education"><i class="fa fa-minus-circle fa-2x text-danger" aria-hidden="true"></i></a> </td> </tr>');
+    });
+
+    $("#customFields").on('click', '.remCF', function () {
+      $(this).parent().parent().remove();
+    });
+
+    $("#past_work").on('click', '.remove_past', function () {
+      $(this).parent().parent().remove();
+    });
+
+    $("#educationalFields").on('click', '.remove_Education', function () {
+      $(this).parent().parent().remove();
+    });
+
+  </script>
